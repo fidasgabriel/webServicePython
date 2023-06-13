@@ -33,7 +33,7 @@ jobs:
 
       - name: Construir URL no RENDER
         run: |
-          echo "URL no RENDER: https://example.qa"
+          echo "URL no RENDER: https://webservicepythonfidas.onrender.com/msg"
   dev:
     runs-on: ubuntu-latest
 
@@ -48,4 +48,4 @@ jobs:
           api-key: ${{ secrets.API_KEY }}
       - name: Construir URL no RENDER
         run: |
-          echo "URL no RENDER: https://example.dev"
+          echo "URL no RENDER: https://webservicepythonfidas.onrender.com/msg"
