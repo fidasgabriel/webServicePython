@@ -6,7 +6,7 @@ on:
       - DEV
 
 jobs:
-  prod:
+  decv:
     runs-on: ubuntu-latest
 
     steps:
