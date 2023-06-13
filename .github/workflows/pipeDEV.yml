@@ -1,0 +1,23 @@
+name: Publicação do Projeto DEV
+
+on:
+  push:
+    branches:
+      - DEV
+
+jobs:
+  decv:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v2
+
+      - name: Realizar deploy no ambiente PROD
+        uses: johnbeynon/render-deploy-action@v0.0.8
+        with:
+          service-id: ${{ secrets.SERVICE_ID }}
+          api-key: ${{ secrets.API_KEY }}
+      - name: Construir URL no RENDER
+        run: |
+          echo "URL no RENDER: https://example.dev"
